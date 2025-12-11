@@ -1023,3 +1023,39 @@ ai-rfp-management-system/
 #### 2. Backend Configuration
 ```env
 EMAIL_HOST=smtp.gmail.com
+```
+
+#### 3. Project Output : 
+
+<img width="1919" height="1015" alt="Screenshot 2025-12-11 172924" src="https://github.com/user-attachments/assets/28c22538-ffcc-4e28-ada4-407f27be59e9" />
+
+<img width="1919" height="1018" alt="Screenshot 2025-12-11 172932" src="https://github.com/user-attachments/assets/eaa1c9ff-3bb4-4c68-9a51-456f748526bc" />
+
+<img width="1919" height="1013" alt="Screenshot 2025-12-11 172941" src="https://github.com/user-attachments/assets/e84ff170-a493-4560-a962-75e20772b34b" />
+
+<img width="1913" height="1019" alt="Screenshot 2025-12-11 172951" src="https://github.com/user-attachments/assets/cd2fa2fc-2cde-483d-81ae-e031d242c304" />
+
+<img width="1919" height="1018" alt="Screenshot 2025-12-11 170640" src="https://github.com/user-attachments/assets/d9799f30-1ccb-4e11-b853-e171abeb69ff" />
+
+<img width="1919" height="1018" alt="Screenshot 2025-12-11 171431" src="https://github.com/user-attachments/assets/88b826e4-5e5f-4c9c-a9cc-c8842a013eae" />
+
+<img width="1919" height="1019" alt="Screenshot 2025-12-11 170652" src="https://github.com/user-attachments/assets/d15ef26b-8967-4453-88ee-06387ad1f9c2" />
+
+<img width="1920" height="1080" alt="Screenshot (699)" src="https://github.com/user-attachments/assets/2c5fc349-c606-4839-a1b0-d8e85e573fbc" />
+
+
+<img width="1920" height="1080" alt="Screenshot (668)" src="https://github.com/user-attachments/assets/8cf16789-4f0b-4ce4-8a67-86363ebf3f85" />
+
+<img width="1920" height="1080" alt="Screenshot (661)" src="https://github.com/user-attachments/assets/e5a25427-a665-41b2-a708-82f73fadaf69" />
+
+<img width="1920" height="1080" alt="Screenshot (669)" src="https://github.com/user-attachments/assets/30dae3e6-0964-4cf0-ba08-cc13b7839042" />
+
+<img width="1920" height="1080" alt="Screenshot (670)" src="https://github.com/user-attachments/assets/bcafe78e-9ec2-4b95-8e24-209434b89f41" />
+
+<img width="1920" height="1080" alt="Screenshot (671)" src="https://github.com/user-attachments/assets/2bccd1b5-1d00-4a1e-b95d-273f98f94d11" />
+
+<img width="1920" height="1080" alt="Screenshot (672)" src="https://github.com/user-attachments/assets/85561cdd-4dc5-4a48-b981-56e92de91a24" />
+
+<img width="1920" height="1080" alt="Screenshot (673)" src="https://github.com/user-attachments/assets/d0792251-3975-4cac-8bb7-3c3de58d0d4d" />
+
+
