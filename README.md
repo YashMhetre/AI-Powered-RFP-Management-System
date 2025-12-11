@@ -275,7 +275,7 @@ IMAP_USER=your-email@gmail.com
 IMAP_PASSWORD=your-app-specific-password
 
 # Application Settings
-FRONTEND_URL=http://localhost:3000
+FRONTEND_URL=http://localhost:5173
 MAX_FILE_SIZE=10485760
 ALLOWED_FILE_TYPES=pdf,xlsx,xls,doc,docx
 ```
