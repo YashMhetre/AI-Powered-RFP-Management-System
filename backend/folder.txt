@@ -1,0 +1,33 @@
+NODE-RFP-MANAGER/
+└── backend/
+    ├── config/
+    │   ├── database.js
+    │   └── email.js
+    ├── controllers/
+    │   ├── proposalController.js
+    │   ├── rfpController.js
+    │   └── vendorController.js
+    ├── logs/
+    │   ├── combined.log
+    │   └── error.log
+    ├── routes/
+    │   ├── proposalRoutes.js
+    │   ├── rfpRoutes.js
+    │   └── vendorRoutes.js
+    ├── scripts/
+    │   └── schema.sql
+    ├── services/
+    │   ├── aiService.js
+    │   ├── emailReceiver.js
+    │   ├── emailService.js
+    │   ├── proposalService.js
+    │   ├── rfpService.js
+    │   └── vendorService.js
+    ├── utils/
+    │   └── logger.js
+    ├── .env
+    ├── .gitignore
+    ├── package-lock.json
+    ├── package.json
+    ├── server.js
+    └── test-email.js

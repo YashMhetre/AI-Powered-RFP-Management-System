@@ -1,0 +1,84 @@
+-- -- Create Database
+-- CREATE DATABASE IF NOT EXISTS rfp_manager;
+-- USE rfp_manager;
+
+-- -- RFPs Table
+-- CREATE TABLE IF NOT EXISTS rfps (
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+--     title VARCHAR(255) NOT NULL,
+--     description TEXT,
+--     budget DECIMAL(15, 2),
+--     deadline DATE,
+--     requirements JSON,
+--     status VARCHAR(50) DEFAULT 'DRAFT',
+--     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--     sent_at TIMESTAMP NULL,
+--     INDEX idx_status (status),
+--     INDEX idx_created_at (created_at DESC)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- -- Vendors Table
+-- CREATE TABLE IF NOT EXISTS vendors (
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+--     name VARCHAR(255) NOT NULL,
+--     email VARCHAR(255) NOT NULL UNIQUE,
+--     contact_person VARCHAR(255),
+--     phone VARCHAR(50),
+--     category VARCHAR(100),
+--     rating DOUBLE,
+--     active BOOLEAN DEFAULT TRUE,
+--     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--     INDEX idx_email (email),
+--     INDEX idx_active (active)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- -- Proposals Table
+-- CREATE TABLE IF NOT EXISTS proposals (
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+--     rfp_id BIGINT NOT NULL,
+--     vendor_id BIGINT NOT NULL,
+--     total_price DECIMAL(15, 2),
+--     delivery_days INT,
+--     payment_terms VARCHAR(500),
+--     warranty VARCHAR(500),
+--     raw_email_body TEXT,
+--     ai_score DOUBLE,
+--     ai_summary TEXT,
+--     ai_recommendation TEXT,
+--     received_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--     FOREIGN KEY (rfp_id) REFERENCES rfps(id) ON DELETE CASCADE,
+--     FOREIGN KEY (vendor_id) REFERENCES vendors(id) ON DELETE CASCADE,
+--     UNIQUE KEY unique_rfp_vendor (rfp_id, vendor_id),
+--     INDEX idx_rfp_id (rfp_id),
+--     INDEX idx_vendor_id (vendor_id),
+--     INDEX idx_ai_score (ai_score DESC)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- -- Proposal Items Table
+-- CREATE TABLE IF NOT EXISTS proposal_items (
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+--     proposal_id BIGINT NOT NULL,
+--     item_name VARCHAR(255) NOT NULL,
+--     quantity INT,
+--     unit_price DECIMAL(15, 2),
+--     total_price DECIMAL(15, 2),
+--     specifications TEXT,
+--     FOREIGN KEY (proposal_id) REFERENCES proposals(id) ON DELETE CASCADE,
+--     INDEX idx_proposal_id (proposal_id)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- -- RFP-Vendors Junction Table (Many-to-Many)
+-- CREATE TABLE IF NOT EXISTS rfp_vendors (
+--     rfp_id BIGINT NOT NULL,
+--     vendor_id BIGINT NOT NULL,
+--     PRIMARY KEY (rfp_id, vendor_id),
+--     FOREIGN KEY (rfp_id) REFERENCES rfps(id) ON DELETE CASCADE,
+--     FOREIGN KEY (vendor_id) REFERENCES vendors(id) ON DELETE CASCADE
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- -- Sample Seed Data (Optional)
+-- INSERT INTO vendors (name, email, contact_person, phone, category, rating, active) VALUES
+-- ('TechSupply Inc', 'sales@techsupply.example.com', 'John Smith', '+1-555-0101', 'Electronics', 4.5, TRUE),
+-- ('Office Equipment Co', 'info@officeequip.example.com', 'Sarah Johnson', '+1-555-0102', 'Office Supplies', 4.2, TRUE),
+-- ('Global Vendors Ltd', 'contact@globalvendors.example.com', 'Mike Davis', '+1-555-0103', 'General', 4.7, TRUE)
+-- ON DUPLICATE KEY UPDATE id=id;
