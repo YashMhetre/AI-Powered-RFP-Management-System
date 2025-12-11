@@ -118,7 +118,6 @@ An intelligent system that:
 - **Sequelize ORM** - Database modeling
 - **Nodemailer** - Email sending (SMTP)
 - **IMAP** - Email receiving
-- **Multer** - File upload handling
 
 ### AI Integration
 - **OpenAI GPT-4** - RFP structuring and response parsing
@@ -342,7 +341,7 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "3000:3000"
+      - "5173:5173"
     depends_on:
       - backend
     volumes:
